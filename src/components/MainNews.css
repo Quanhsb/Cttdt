@@ -1,0 +1,20 @@
+/* MainNews.css */
+.main-news {
+  flex: 2;
+}
+
+.main-news img {
+  width: 100%;
+  height: auto;
+}
+
+.main-news h2 {
+  color: #b10000;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.main-news p {
+  font-size: 14px;
+  color: #333;
+}
