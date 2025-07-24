@@ -1,20 +1,31 @@
-/* MainNews.css */
 .main-news {
-  flex: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .main-news img {
   width: 100%;
+  max-width: 400px;
   height: auto;
+  border-radius: 6px;
+  display: block;
 }
 
-.main-news h2 {
+.news-content {
+  flex: 1;
+  text-align: left;
+}
+
+.news-content h2 {
   color: #b10000;
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.main-news p {
+.news-content p {
   font-size: 14px;
   color: #333;
+  margin: 0;
 }

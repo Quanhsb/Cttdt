@@ -1,10 +1,13 @@
 import { categories } from "../../data/categories";
-
+import { useEffect } from "react";
 export default function BaiViet2BoCongAn() {
   const article = categories["HOẠT ĐỘNG CỦA BỘ CÔNG AN"][1];
-
+  useEffect(() => {
+    console.log("bai viet cong an 2");}, []);
+  console.log("Article data:", article);
   return (
     <div>
+      
       <h1 style={{ fontSize: "18px", fontWeight: 600, color: "#1e3a8a", marginBottom: "12px", lineHeight: "1.5", borderLeft: "4px solid #dc2626", paddingLeft: "16px" }}>
         {article.title}
       </h1>

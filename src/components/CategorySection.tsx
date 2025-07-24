@@ -5,10 +5,12 @@ import { categories, categoryPairs } from "../data/categories";
 const slugify = (text: string) =>
   text
     .toLowerCase()
-    .normalize("NFD") // remove accents
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/đ/g, "d") // fix riêng chữ đ
+    .replace(/Đ/g, "d") // phòng trường hợp viết hoa
+    .normalize("NFD") // tách dấu ra khỏi chữ cái
+    .replace(/[\u0300-\u036f]/g, "") // xóa dấu
+    .replace(/[^a-z0-9]+/g, "-") // thay ký tự không hợp lệ bằng dấu gạch ngang
+    .replace(/^-+|-+$/g, ""); // xóa dấu - ở đầu/cuối
 
 export default function CategorySection() {
   return (
@@ -21,16 +23,11 @@ export default function CategorySection() {
               <div className="news-list">
                 {(categories[title] || []).map((article, i) => {
                   const slug = slugify(article.title);
+                  console.log(`Slug for "${article.title}": ${slug}`);
                   return (
                     <div className="news-item" key={`${title}-${i}`}>
-                      {article.img && (
-                        <img src={article.img} alt="Ảnh tin" />
-                      )}
-                      <Link
-                        to={`/tin-tuc-su-kien/bai-viet?category=${encodeURIComponent(
-                          title
-                        )}&slug=${slug}`}
-                      >
+                      {article.img && <img src={article.img} alt="Ảnh tin" />}
+                      <Link to={`/tin-tuc-su-kien/bai-viet/${slug}`}>
                         {article.title}
                       </Link>
                     </div>

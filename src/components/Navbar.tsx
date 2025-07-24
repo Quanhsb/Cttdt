@@ -5,7 +5,6 @@ function Navbar() {
     <nav className="navbar">
       <ul className="menu">
         <li className="menu-item home-button">Trang chủ</li>
-        {/* --- Giới thiệu --- */}
         <li className="menu-item">
           Giới thiệu
           <ul className="dropdown">
@@ -46,13 +45,13 @@ function Navbar() {
           </ul>
         </li>
 
-        {/* --- Phổ biến GDPL --- */}
+        {/* Thêm thẻ <a> vào đây */}
         <li className="menu-item">
-          Phổ biến, Giáo dục pháp luật
-          {/* Chưa có menu con – nếu có thì bổ sung sau */}
+          <a href="https://bocongan.gov.vn/pbgdpl.html" className="no-blue-link">
+            Phổ biến, Giáo dục pháp luật
+          </a>
         </li>
 
-        {/* --- Bộ với công dân --- */}
         <li className="menu-item">
           Bộ với công dân
           <ul className="dropdown">
@@ -61,7 +60,6 @@ function Navbar() {
           </ul>
         </li>
 
-        {/* --- Thống kê --- */}
         <li className="menu-item">
           Thống kê
           <ul className="dropdown">

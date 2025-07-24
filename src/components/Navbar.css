@@ -119,3 +119,10 @@ ul, li {
 .sub-dropdown li:hover {
   background-color: #eaeaea;
 }
+
+.menu-item a.no-blue-link {
+  color: inherit; /* Kế thừa màu chữ từ phần tử cha (menu-item) */
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
