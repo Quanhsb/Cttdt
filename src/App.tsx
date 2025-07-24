@@ -12,10 +12,7 @@ import QandASection from "./components/QandASection";
 import Gallery from "./components/Gallery";
 import BannerStrip from "./components/BannerStrip";
 
-import BaiViet1BoCongAn from "./pages/tin-tuc-su-kien/BaiViet1BoCongAn";
 import BaiViet2BoCongAn from "./pages/tin-tuc-su-kien/BaiViet2BoCongAn";
-import BaiViet3XaHoi from "./pages/tin-tuc-su-kien/BaiViet3XaHoi"; // ví dụ bài viết thứ 3
-
 function App() {
   return (
     <Router>
@@ -41,21 +38,13 @@ function App() {
               }
             />
 
-            {/* Route riêng cho từng bài viết */}
             <Route
-              path="/tin-tuc-su-kien/bai-viet/xung-dang-la-cho-dua-vung-chac-cua-dang-bo"
-              element={<BaiViet1BoCongAn />}
-            />
-            <Route
-              path="/tin-tuc-su-kien/bai-viet/trien-khai-cong-tac-dac-xa-nam-2025-dot-2"
+              path="/tin-tuc-su-kien/bai-viet"
               element={<BaiViet2BoCongAn />}
             />
-            <Route
-              path="/tin-tuc-su-kien/bai-viet/bai-viet-3-xa-hoi"
-              element={<BaiViet3XaHoi />}
-            />
-            {/* Thêm các route cho các bài viết khác ở đây */}
           </Routes>
+          
+          
         </div>
         <Footer />
       </div>

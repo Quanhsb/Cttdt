@@ -5,7 +5,7 @@ import { categories, categoryPairs } from "../data/categories";
 const slugify = (text: string) =>
   text
     .toLowerCase()
-    .normalize("NFD")
+    .normalize("NFD") // remove accents
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
@@ -27,7 +27,9 @@ export default function CategorySection() {
                         <img src={article.img} alt="Ảnh tin" />
                       )}
                       <Link
-                        to={`/tin-tuc-su-kien/bai-viet/${slug}`}
+                        to={`/tin-tuc-su-kien/bai-viet?category=${encodeURIComponent(
+                          title
+                        )}&slug=${slug}`}
                       >
                         {article.title}
                       </Link>
