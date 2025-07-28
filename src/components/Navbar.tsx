@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <ul className="menu">
-        <li className="menu-item home-button">Trang chủ</li>
+        <li className="menu-item home-button">
+          <Link to="/" className="no-blue-link">Trang chủ</Link>
+        </li>
         <li className="menu-item">
           Giới thiệu
           <ul className="dropdown">
@@ -23,7 +26,7 @@ function Navbar() {
           </ul>
         </li>
 
-        {/* --- Tin tức sự kiện --- */}
+        {/* tin tuc su kien*/}
         <li className="menu-item">
           Tin tức sự kiện
           <ul className="dropdown">
@@ -45,7 +48,6 @@ function Navbar() {
           </ul>
         </li>
 
-        {/* Thêm thẻ <a> vào đây */}
         <li className="menu-item">
           <a href="https://bocongan.gov.vn/pbgdpl.html" className="no-blue-link">
             Phổ biến, Giáo dục pháp luật
